@@ -1,12 +1,20 @@
-import Button from 'react-bootstrap/Button';
+import NavbarPage from './components/Navbar';
+import Masthead from './components/Masthead';
+import Portfolio from './components/Portfolio';
+import About from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 import './App.css'
 
 function App() {
   return (
     <>
-      <Button as="a" variant="primary">
-        Button as link
-      </Button>
+      <NavbarPage />
+      <Masthead />
+      <Portfolio />
+      <About />
+      <Contact />
+      <Footer />
     </>
   )
 }
