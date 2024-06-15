@@ -1,14 +1,35 @@
+import { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap"
+import ConvertTemp from "./ConvertTemp";
 
 const Footer = () => {
+  const [currentDateTime, setCurrentDateTime] = useState('');
+
+  useEffect(() => {
+    const updateDateTime = () => {
+      const now = new Date();
+      const formattedDate = now.toLocaleDateString('en-GB');
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
+      const formattedTime = `${hours}:${minutes}:${seconds}`;
+      setCurrentDateTime(`${formattedDate} ${formattedTime}`);
+    };
+
+    updateDateTime();
+    const intervalId = setInterval(updateDateTime, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <>
       <footer className="footer">
         <Container>
           <Row>
-            <Col lg={4} mb-5 mb-lg-0>
+            <Col lg={4} className="mb-5 mb-lg-0">
               <h4 className="text-uppercase mb-4">
-                <div id="datetime"></div>
+                {currentDateTime}
               </h4>
             </Col>
             <Col lg={4} className="mb-5 mb-lg-0 text-center">
@@ -19,13 +40,7 @@ const Footer = () => {
               <Button variant="outline-light" className="btn-social mx-1" href="#"><i className="fab fa-fw fa-facebook-f"></i></Button>
             </Col>
             <Col lg={4} className="text-left">
-              {/* <InputGroup className="mb-3">
-                <FormControl id="fahrenheit" type="number" placeholder="Fahrenheit" required />
-                <Button variant="primary" className="mt-2" id="convertButton">Convert to Celsius</Button>
-              </InputGroup>
-              <h5 className="mt-2">
-                <div id="resultCelsius"></div>
-              </h5> */}
+              <ConvertTemp />
             </Col>
           </Row>
         </Container>
