@@ -12,11 +12,13 @@ To get a local copy of the project, follow these steps:
 
 2. Install dependencies:
    ```sh
-   yarn / npm install
+   yarn
+   npm install
 
 3. Run the development server:
    ```sh
-   yarn dev / npm run dev
+   yarn dev
+   npm run dev
 
 ## Folder Structure
 - src/: Contains the source code files.
