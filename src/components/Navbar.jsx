@@ -29,6 +29,7 @@ const NavbarPage = () => {
             <Nav.Item className="mx-0 mx-lg-1"><Nav.Link href="#portfolio">Portfolio</Nav.Link></Nav.Item>
             <Nav.Item className="mx-0 mx-lg-1"><Nav.Link href="#about">About</Nav.Link></Nav.Item>
             <Nav.Item className="mx-0 mx-lg-1"><Nav.Link href="#contact">Contact</Nav.Link></Nav.Item>
+            <Nav.Item className="mx-0 mx-lg-1"><Nav.Link href="/todo">Todo List</Nav.Link></Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

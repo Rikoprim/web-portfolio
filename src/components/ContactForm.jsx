@@ -55,7 +55,7 @@ const ContactForm = () => {
       setSuccessMessage('Success submitted');
       setFormData({ name: '', email: '', phone: '', message: '' });
       setErrors({});
-      setTimeout(() => setSuccessMessage(''), 3000); // Hide success message after 3 seconds
+      setTimeout(() => setSuccessMessage(''), 3000);
     }
   };
 

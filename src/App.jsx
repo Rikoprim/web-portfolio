@@ -1,20 +1,15 @@
-import NavbarPage from './components/Navbar';
-import Masthead from './components/Masthead';
-import Portfolio from './components/Portfolio';
-import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Home'
+import Todo from './TodoList'
 import './App.css'
 
 function App() {
   return (
     <>
-      <NavbarPage />
-      <Masthead />
-      <Portfolio />
-      <About />
-      <Contact />
-      <Footer />
+      <Routes>
+         <Route path='/' element={<Home/>} />
+         <Route path='/todo' element={<Todo/>} />
+       </Routes>
     </>
   )
 }

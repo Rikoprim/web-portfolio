@@ -1,8 +1,33 @@
-# React + Vite
+## Web Portfolio and Todo List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple web portfolio and Todo list application built with React and Bootstrap.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get a local copy of the project, follow these steps:
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Rikoprim/web-portfolio
+
+2. Install dependencies:
+   ```sh
+   yarn / npm install
+
+3. Run the development server:
+   ```sh
+   yarn dev / npm run dev
+
+## Folder Structure
+- src/: Contains the source code files.
+- components/: Contains React components.
+- App.js: Main component rendering the application.
+- App.css: Do Custom style bootstrap.
+
+## React Hooks
+- useState: Used to manage component state.
+- useEffect: Used to perform side effects in components.
+
+## Routing Menu
+- / : To display the front landing page.
+- /todo : To display the todo list app.
